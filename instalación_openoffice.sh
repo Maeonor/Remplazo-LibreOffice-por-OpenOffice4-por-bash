@@ -6,7 +6,7 @@
 
 # === Comprobación de privilegios ===
 if [[ $EUID -ne 0 ]]; then
-    echo "⚠️  Por favor, ejecuta este script con privilegios de superusuario (sudo).  ⚠️"
+    echo "⚠️  Ejecuta este script con privilegios de superusuario (sudo), pendejo :D  ⚠️"
     exit 1
 fi
 
