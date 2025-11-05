@@ -69,7 +69,7 @@ fi
 # Paso 9: Instalar el paquete del menú
 DEB_FILE=$(ls openoffice*.deb 2>/dev/null | head -n 1)
 if [[ -n "$DEB_FILE" ]]; then
-  echo "📦 Instalando integración de escritorio..."
+  echo "Instalando integración de escritorio..."
   sudo dpkg -i "$DEB_FILE" || sudo apt -f install -y
   echo "Integración instalada."
 else
@@ -88,7 +88,7 @@ read -rp "¿Deseas desinstalar OpenOffice ahora? (S/n): " RESP
 RESP=${RESP:-S}
 
 if [[ "$RESP" =~ ^([sS]|[sS][iI])$ ]]; then
-  echo "🧹 Desinstalando OpenOffice..."
+  echo "Desinstalando OpenOffice..."
   sudo apt remove --purge openoffice* -y
   sudo apt autoremove -y
   sudo apt clean
